@@ -1,0 +1,32 @@
+<mat-card>
+          <mat-list >
+                    <div mat-subheader class="text-center"><h1>Add Categories</h1></div>
+          </mat-list>
+
+          <div class="bootstrap-wrapper">
+                    <div class="row">
+                              <div class="container">
+                                        <div class="col-md-8 offset-md-2">
+                                                  <form action="" (ngSubmit)="addCategory()">
+                                                         <mat-form-field appearance="outline" class="w100">
+                                                            <mat-label>
+                                                                      Title
+                                                            </mat-label>
+                                                            <input type="text" [(ngModel)]="category.title" matInput name="description" placeholder="Enter title here ">
+                                                         </mat-form-field>
+                                                         <mat-form-field appearance="outline" class="w100">
+                                                            <mat-label>
+                                                                      Description
+                                                            </mat-label>
+                                                            <textarea type="text" [(ngModel)]="category.description" name="Description" matInput name="description" placeholder="Enter description here " rows="15"></textarea>
+                                                         </mat-form-field>
+                                                         <div class="container text-center mb20">
+
+                                                                   <button mat-raised-button class="text-center" type="submit" color="accent">Add </button>
+                                                         </div>
+                                                  </form>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+</mat-card>

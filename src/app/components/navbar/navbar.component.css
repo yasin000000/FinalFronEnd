@@ -1,0 +1,6 @@
+.example-spacer {
+          flex: 1 1 auto;
+        }
+        .mdc-icon-button{
+          font-size: 15px;
+        }

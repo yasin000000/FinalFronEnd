@@ -1,0 +1,21 @@
+.img{
+border: 2px solid red;
+border-radius: 100px;
+ max-width: 150px;
+ max-height: 150px;
+ 
+}
+.table{
+      
+         padding-left: 10%;
+width: 100%;
+}
+table tr td{
+          border: 1px solid red; 
+          border-collapse: collapse;
+          text-align: center;
+          padding: 20px 200px;
+          text-decoration: none;
+          /* border: 2px solid black; */
+        
+}

@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+          <div class="container-fluid">
+                    <h1 class="mt20 text-center"><b> Available Quizes</b></h1>
+                    <div class="row mt20" *ngIf="quizes">
+                              <div class="col-md-4"  *ngFor="let q of quizes">
+                                       <mat-card class="mb20">
+                                        <mat-card-header>
+                                                  <div mat-card-avatar class="example"></div>
+                                                  <mat-card-title>
+                                                            {{q.title}}
+                                                  </mat-card-title>
+                                                  <mat-card-subtitle>
+                                                            {{q.category.title}}
+                                                  </mat-card-subtitle>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                                  <p class="trunc">{{q.description}}</p>
+                                        </mat-card-content>
+                                        <mat-action-list>
+                                                   <button mat-button color="primary" >View</button>
+                                                   <button mat-button color="accent"[routerLink]="'/user-dashboard/instructions/'+q.quizeid">Start</button>
+                                         </mat-action-list>
+                                       </mat-card>
+                              </div>
+                    </div>
+                    <div class="row mt20" *ngIf="quize">
+                              <div class="col-md-4" >
+                                       <mat-card class="mb20">
+                                        <mat-card-header>
+                                                  <div mat-card-avatar class="example"></div>
+                                                  <mat-card-title>
+                                                            {{quize.title}}
+                                                  </mat-card-title>
+                                                  <mat-card-subtitle>
+                                                            {{quize.title}}
+                                                  </mat-card-subtitle>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                                  <p class="trunc">{{quize.description}}</p>
+                                        </mat-card-content>
+                                        <mat-action-list>
+                                                   <button mat-button color="primary" >View</button>
+                                                   <button mat-button color="accent" [routerLink]="'/user-dashboard/instructions/'+quize.quizeid">Start</button>
+                                         </mat-action-list>
+                                       </mat-card>
+                              </div>
+                    </div>
+                   
+          </div>
+</div>

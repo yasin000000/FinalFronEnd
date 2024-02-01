@@ -1,0 +1,88 @@
+
+          <div class="bootstrap-wrapper">
+                    <div class="container">
+                              <div class="row mt20">
+                                        <div class="col-md-12 ">
+                                                  <h1>Add Queitions to  <span style="font-weight: bold;">{{title}}</span></h1>
+                                                  <mat-card>
+                                                            <mat-card-header>
+                                                                      <mat-card-subtitle>
+                                                                                Enter Queition Here
+                                                                      </mat-card-subtitle>
+                                                            </mat-card-header>
+                                                            <mat-card-content>
+                                                                      <form (ngSubmit)="formSubmit()">
+                                                                                <mat-form-field appearance="fill" class="w100">
+                                                                                          <mat-label>Enter Queition here</mat-label>
+                                                                                          <textarea
+                                                                                           matInput placeholder="Enter here" name="content" [(ngModel)]="queition.content"></textarea>
+                                                                                        </mat-form-field>
+                                                                                        <div class="row w100 text-center">
+                                                                                          <div class="col-md-6">
+                                                                                                    <mat-form-field class="w100">
+                                                                                                              <mat-label>
+                                                                                                                        Option1
+                                                                                                              </mat-label>
+                                                                                                              <input [(ngModel)]="queition.option1"
+                                                                                                             name="option1"
+                                                                                                              type="text"matInput>
+                                                                                                    </mat-form-field>
+                                                                                          </div>
+                                                                                          <div class="col-md-6">
+                                                                                                    <mat-form-field class="w100">
+                                                                                                              <mat-label>
+                                                                                                                        Option2
+                                                                                                              </mat-label>
+                                                                                                              <input 
+                                                                                                              [(ngModel)]="queition.option2"
+                                                                                                             name="option2"
+                                                                                                              type="text"matInput>
+                                                                                                    </mat-form-field>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                        <div class="row w100 text-center">
+                                                                                          <div class="col-md-6">
+                                                                                                    <mat-form-field class="w100">
+                                                                                                              <mat-label>
+                                                                                                                        Option3
+                                                                                                              </mat-label>
+                                                                                                              <input
+                                                                                                              [(ngModel)]="queition.option3"
+                                                                                                              name="option3"
+                                                                                                               type="text"matInput>
+                                                                                                    </mat-form-field>
+                                                                                          </div>
+                                                                                          <div class="col-md-6">
+                                                                                                    <mat-form-field class="w100">
+                                                                                                              <mat-label>
+                                                                                                                        Option4
+                                                                                                              </mat-label>
+                                                                                                              <input 
+                                                                                                              [(ngModel)]="queition.option4"
+                                                                                                              name="option4"
+                                                                                                              type="text"matInput>
+                                                                                                    
+                                                                                                    </mat-form-field>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                       <mat-form-field class="w100">
+                                                                                          <mat-label>Select Answer</mat-label>
+                                                                                          <mat-select required [(ngModel)]="queition.answer" name="answer">
+                                                                                                    <mat-option *ngIf="queition.option1" [value]="queition.option1">{{queition.option1}}</mat-option>
+                                                                                                    <mat-option *ngIf="queition.option2" [value]="queition.option2">{{queition.option2}}</mat-option>
+                                                                                                    <mat-option *ngIf="queition.option3" [value]="queition.option3">{{queition.option3}}</mat-option>
+                                                                                                    <mat-option *ngIf="queition.option4" [value]="queition.option4">{{queition.option4}}</mat-option>
+                                                                                          </mat-select>
+                                                                                       </mat-form-field>
+                                                                                       <div class="container text-center">
+                                                                                          <button mat-raised-button type="submit" color="accent">Add</button>
+                                                                                       </div>
+                                                                      </form>
+                                                            </mat-card-content>
+                                                  </mat-card>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+
+          {{queition | json}}

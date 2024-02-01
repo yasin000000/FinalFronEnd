@@ -1,0 +1,11 @@
+.trunc{
+          display: block;
+          white-space: nowrap;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+}
+.example{
+          background-image: url(../../../../assets/new.png);
+          background-size: cover;
+}
